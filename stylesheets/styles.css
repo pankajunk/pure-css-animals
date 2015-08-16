@@ -8,12 +8,15 @@ a{
 }
 
 .navigation {
-	height: 10vmin;
+    height: 10vmin;
     border-bottom: 1px solid #BDBDBD;
     box-shadow: 0px 2px 2px #888888;
     background-color: #387CEF;
     padding: 3.4vmin 0vmin 0vmin 5vmin;
     color: #fff;
+    position: absolute;
+    width: 100%;
+    z-index: 1000000000;
 }
 
 .card{
@@ -45,8 +48,11 @@ a{
 }
 
 .content{
-padding:2%;
-overflow:hidden;
+    padding: 2%;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    top: 10vmin;
 }
 
 /* OWL */
@@ -2687,3 +2693,48 @@ transform: rotate(270deg);
 95% {top: 1vmin; left: 2vmin; height: 4vmin; width: 2vmin;}
 100% {top: 3vmin; left: 2vmin; height: 0vmin; width: 0vmin;}
 }
+
+#menu ul {
+	list-style: none;
+	position: relative;
+	display: inline-block;
+	
+	}
+
+#menu ul li {float:left;padding:0;}
+
+#menu ul li:hover {
+  cursor:pointer; 
+  }
+	
+#menu ul li a {
+  color: #fff; 
+  
+  }
+
+#menu ul ul {
+  display: none;
+	background: orange;   
+  padding:0px;width:33.3%;
+	position: absolute;top: 100%;}
+
+#menu ul li:hover > ul {display: block;}
+
+#menu ul ul li {
+    float: left;
+    text-align: center;
+    position: relative;
+    padding: 10px;
+    border-top: 2px solid #1657C3;
+    width: 50vmin;
+    left: -43vmin;
+    background-color: #949494;
+    box-shadow: 0px 2px 3px #424242;
+  
+  }
+
+#menu ul ul ul { 
+  position:absolute;
+  top:-1px;
+  left:100%;
+  width:120%;}
