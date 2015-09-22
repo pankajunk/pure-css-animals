@@ -3708,6 +3708,52 @@ height: 2.5vmin;
     top: 30%;
 
 
+
+}
+
+.blue-whale:after {
+	content: "";
+    z-index: -1;
+    width: 20vmin;
+    height: 6vmin;
+    position: absolute;
+    transform: rotate(10deg);
+    top: 52%;
+    right: -6%;
+    background: #f7e6d3;
+    background: -moz-linear-gradient(top, #f7e6d3 0%, #607aa0 80%, #607aa0 82%, #607aa0 84%, #607aa0 100%, #607aa0 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f7e6d3), color-stop(80%,#607aa0), color-stop(82%,#607aa0), color-stop(84%,#607aa0), color-stop(100%,#607aa0), color-stop(100%,#607aa0));
+    background: -webkit-linear-gradient(top, #f7e6d3 0%,#607aa0 80%,#607aa0 82%,#607aa0 84%,#607aa0 100%,#607aa0 100%);
+    background: -o-linear-gradient(top, #f7e6d3 0%,#607aa0 80%,#607aa0 82%,#607aa0 84%,#607aa0 100%,#607aa0 100%);
+    background: -ms-linear-gradient(top, #f7e6d3 0%,#607aa0 80%,#607aa0 82%,#607aa0 84%,#607aa0 100%,#607aa0 100%);
+    background: linear-gradient(to bottom, #4C6180 0%,#607aa0 80%,#607aa0 82%,#607aa0 84%,#607aa0 100%,#607aa0 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7e6d3', endColorstr='#607aa0',GradientType=0 );
+    opacity: .1;
+
+}
+
+.blue-whale-color {
+    height: 2vmin;
+    width: 17vmin;
+    background-color: transparent;
+    position: absolute;
+    top: 4vmin;
+    left: 1vmin;
+    box-shadow: 2vmin -6vmin 6vmin #fff;
+	z-index:1;
+	
+}
+
+.blue-whale-color-bottom {
+    height: .5vmin;
+    width: 17vmin;
+    background-color: transparent;
+    position: absolute;
+    top: 2.5vmin;
+    left: 1vmin;
+    box-shadow: -1vmin 4vmin 4vmin #090E15;
+    z-index: 1;
+	
 }
 
 @keyframes whale-move {
@@ -3725,7 +3771,7 @@ height: 2.5vmin;
 .blue-whale-main {
     height: 7vmin;
     width: 20vmin;
-    background: #ffffff;
+    background: #758AA7;
     /*background: -moz-linear-gradient(top, #ffffff 0%, #f4f0eb 19%, #f7e6d3 56%, #607aa0 100%);
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(19%,#f4f0eb), color-stop(56%,#f7e6d3), color-stop(100%,#607aa0));
     background: -webkit-linear-gradient(top, #ffffff 0%,#f4f0eb 19%,#f7e6d3 56%,#607aa0 100%);
@@ -3738,6 +3784,8 @@ height: 2.5vmin;
     transform: translateX(-50%) rotate(0deg);
     border-radius: 0% 30% 2% 0%;
 	transform-origin: 0% 50%;
+	overflow:hidden;
+	z-index:1;
 
 }
 
@@ -3758,13 +3806,14 @@ height: 2.5vmin;
 }
 
 .blue-whale-backside {
-    content: "";
     height: 7vmin;
     width: 12vmin;
-    background: #ffffff;
+    background: #758AA7;
     position: absolute;
     left: -124%;
     border-radius: 0% 0% 0% 100%;
+    overflow: hidden;
+    box-shadow: inset 0vmin -2vmin 3vmin #71819A;
     /*background: -moz-linear-gradient(top, #ffffff 0%, #f4f0eb 19%, #f7e6d3 56%, #607aa0 100%);
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(19%,#f4f0eb), color-stop(56%,#f7e6d3), color-stop(100%,#607aa0));
     background: -webkit-linear-gradient(top, #ffffff 0%,#f4f0eb 19%,#f7e6d3 56%,#607aa0 100%);
@@ -3774,8 +3823,6 @@ height: 2.5vmin;
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#607aa0',GradientType=0 );*/
 
 }
-
-
 
 .blue-whale-eye {
     height: .3vmin;
@@ -3791,7 +3838,7 @@ height: 2.5vmin;
 .gill-container {
     background-color: transparent;
     height: 3vmin;
-    width: 2.5vmin;
+    width: 4vmin;
     -moz-border-radius: 150px 0 0 0;
     border-radius: 0 0 4vmin 0;
     position: absolute;
@@ -3805,7 +3852,7 @@ height: 2.5vmin;
 .blue-whale-gill {
     background-color: #9DA6B5;
     height: 3vmin;
-    width: 2.5vmin;
+    width: 5vmin;
     -moz-border-radius: 150px 0 0 0;
     border-radius: 0 0 4vmin 0;
     position: absolute;
@@ -3831,13 +3878,33 @@ height: 2.5vmin;
 100% {height: 2vmin; box-shadow: 2px 2px 2px #62728A;}
 }
 
+.blue-ocean:hover .blue-whale-gill{
+    animation: whale-gill1 3s ease-in-out infinite;
+	}
+	
+@keyframes whale-gill1 {
+0% {height: 2vmin; box-shadow: 2px 2px 2px #62728A;}
+10% {height: 3vmin; box-shadow: none;}
+70% {height: 3vmin; box-shadow: none;}
+80% {height: 2vmin; box-shadow: 2px 2px 2px #62728A;}
+100% {height: 2vmin; box-shadow: 2px 2px 2px #62728A;}
+}
+
+@-webkit-keyframes whale-gill1 {
+0% {height: 2vmin; box-shadow: 2px 2px 2px #62728A;}
+10% {height: 3vmin; box-shadow: none;}
+70% {height: 3vmin; box-shadow: none;}
+80% {height: 2vmin; box-shadow: 2px 2px 2px #62728A;}
+100% {height: 2vmin; box-shadow: 2px 2px 2px #62728A;}
+}
+
 .blue-whale-flipper {
     left: -166%;
-    top: -29%;
+    top: -36%;
     position: absolute;
     width: 6vmin;
     height: 2.5vmin;
-    background-color: #FFF;
+    background-color: #687B96;
     -moz-border-radius: 0px 20vmin 0px 20vmin;
     -webkit-border-radius: 0px 20vmin 0px 20vmin;
     border-radius: 0px 20vmin 0px 20vmin;
@@ -3851,6 +3918,7 @@ height: 2.5vmin;
     -o-transform: rotate(-23deg);
     -ms-transform: rotate(-23deg);
     transform: rotate(-73deg);
+    animation: flipper-simple 3s ease-in-out infinite;
 }
 
 .blue-whale-flipper:after {
@@ -3860,7 +3928,7 @@ height: 2.5vmin;
     position: absolute;
     width: 6vmin;
     height: 2.5vmin;
-    background-color: #fff;
+    background-color: #758AA7;
     -moz-border-radius: 0px 20vmin 0px 20vmin;
     -webkit-border-radius: 0px 20vmin 0px 20vmin;
     border-radius: 0px 20vmin 0px 20vmin;
@@ -3886,36 +3954,60 @@ height: 2.5vmin;
 100% {border-radius: 20% 0% 0% 100%}
 }
 
+@keyframes flipper-simple {
+0% {transform: rotate(-73deg); }
+25% {transform: rotate(-13deg);}
+70% {transform: rotate(-13deg);}
+100% {transform: rotate(-73deg);}
+}
+
+@-webkit-keyframes flipper-simple {
+0% {transform: rotate(-73deg); }
+25% {transform: rotate(-13deg);}
+50% {transform: rotate(-13deg);}
+100% {transform: rotate(-73deg);}
+}
+
 @keyframes flipper-move {
-0% {top: -35%; background-color: #FFF; transform: rotate(-73deg); }
-25% {top: -35%; background-color: #FFF; transform: rotate(25deg); }
-50% {top: 58%; background-color: #FFF; transform: rotate(25deg);}
-75% {top: 58%; background-color: #FFF; transform: rotate(-73deg);}
-100% {top: -35%; background-color: #FFF; transform: rotate(-73deg);}
+0% {top: -35%; transform: rotate(-73deg); }
+25% {top: -35%; transform: rotate(25deg); }
+50% {top: 58%; transform: rotate(25deg);}
+75% {top: 58%; transform: rotate(-73deg);}
+100% {top: -35%; transform: rotate(-73deg);}
 }
 
 @-webkit-keyframes flipper-move {
-0% {top: -65%; background-color: #FFF;}
-30% {top: 16%; background-color: #FFF;}
-60% {top: 16%; background-color: #FFF;}
-90% {top: -67%; background-color: #FFF;}
-100% {top: -67%; background-color: #FFF;}
+0% {top: -35%; transform: rotate(-73deg); }
+25% {top: -35%; transform: rotate(25deg); }
+50% {top: 58%; transform: rotate(25deg);}
+75% {top: 58%; transform: rotate(-73deg);}
+100% {top: -35%; transform: rotate(-73deg);}
 }
 
-.blue-whale:hover {
-	animation:whale-move 25s ease-in-out infinite;
+.blue-ocean:hover .blue-whale{
+	animation:whale-move 15s linear infinite;
 }
 
-.blue-whale:hover .blue-whale-main{
-	animation:whale-swim 4s ease-in-out infinite;
+.blue-ocean:hover .blue-whale-main{
+	animation:whale-swim 2s linear infinite;
 }
 
-.blue-whale:hover .blue-whale-backside{
-	animation:whale-swim-back 4s ease-in-out infinite;
+.blue-ocean:hover .blue-whale-backside{
+	animation:whale-swim-back 2s linear infinite;
 }
 
-.blue-whale:hover .blue-whale-flipper{
-	animation:flipper-move 4s ease-in-out infinite;
+.blue-ocean:hover .blue-whale-flipper{
+	animation:flipper-move 2s linear infinite;
+}
+
+.blue-whale-line1 {
+    width: 40vmin;
+    height: 5vmin;
+    background-color: transparent;
+    position: absolute;
+    left: 40%;
+    top: -10%;
+    box-shadow: 1vmin 2vmin 25vmin #F5DAF4;
 }
 
 
@@ -4056,7 +4148,4 @@ div.lightbox figure .closemsg, div.lightbox figure figcaption {
   background-color: blue;
   opacity: 0.75;
 }  
-
-
-
 
