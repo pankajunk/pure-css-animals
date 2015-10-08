@@ -4010,6 +4010,712 @@ height: 2.5vmin;
     box-shadow: 1vmin 2vmin 25vmin #F5DAF4;
 }
 
+/* TOAD */
+
+.toad-bg {
+    width: 100%;
+    height: 100%;
+	background-color:#83B3C4;
+	overflow: hidden;
+	position:relative;
+}
+
+.toad-leaf {
+    width: 30vmin;
+    height: 30vmin;
+    background-color: #77A048;
+    position: absolute;
+    border-radius: 50%;
+    box-shadow: 0vmin 0vmin .5vmin .7vmin #6892A0;
+    bottom: 16%;
+	left:1%;
+}
+
+.toad-leaf-shadow {
+    width: .5vmin;
+    height: 5vmin;
+    background-color: transparent;
+    position: absolute;
+    bottom: 12.1vmin;
+    z-index: 5;
+    right: 2.5vmin;
+    transform: rotate(-84deg);
+    box-shadow: -.4vmin .4vmin .4vmin .1vmin #6892A0;
+}
+
+.toad-leaf:after{
+	content: "";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 12vmin 4vmin 0 4vmin;
+    border-color: #83B3C4 transparent transparent transparent;
+    position: absolute;
+    transform: rotate(115deg);
+    right: -13%;
+    bottom: 20%;
+    box-shadow: none;
+}
+
+.toad-leaf-ripples {
+    width: 110%;
+    height: 110%;
+    background-color: transparent;
+    position: absolute;
+    border-radius: 50%;
+    z-index: 5;
+    top: -5%;
+    left: -5%;
+	transform: scale(1);
+    transform-origin: 50% 50%;
+}
+
+.toad-leaf-ripples2 {
+    width: 110%;
+    height: 110%;
+    background-color: transparent;
+    position: absolute;
+    border-radius: 50%;
+    z-index: 5;
+    top: -5%;
+    left: -5%;
+	transform: scale(1);
+    transform-origin: 50% 50%;
+}
+
+ 
+.toad-bg:hover .toad-leaf  {
+	animation: toad-leaf-move 30s linear infinite;
+}
+
+.toad-bg:hover .toad-leaf-ripples  {
+	animation: toad-ripple 3s linear 3s 2;
+}
+
+.toad-bg:hover .toad-leaf-ripples2  {
+	animation: toad-ripple 3s linear 3.8s 2;
+}  
+
+@keyframes toad-ripple {
+0% {transform: scale(1); border: .3vmin solid rgba(181, 210, 220, 0);}
+10% {transform: scale(1.05); border: .3vmin solid rgba(181, 210, 220, 1);}
+90%{transform: scale(1.45); border: .3vmin solid rgba(181, 210, 220, 0);}
+100% {transform: scale(1.5); border: .3vmin solid rgba(181, 210, 220, 0);}
+}
+
+@-webkit-keyframes toad-ripple {
+0% {transform: scale(1); border: .3vmin solid rgba(181, 210, 220, 0);}
+10% {transform: scale(1.05); border: .3vmin solid rgba(181, 210, 220, 1);}
+90%{transform: scale(1.45); border: .3vmin solid rgba(181, 210, 220, 0);}
+100% {transform: scale(1.5); border: .3vmin solid rgba(181, 210, 220, 0);}
+}
+
+
+
+@keyframes toad-leaf-move {
+0% {bottom: 16%; left: 1%; transform: rotate(0deg);}
+10% {bottom: 19%; left: 10%; transform: rotate(150deg);}
+20% {bottom: 22%; left: 1%; transform: rotate(250deg);}
+80% {bottom: 23%; left: 1%; transform: rotate(350deg);}
+100% {bottom: 23%; left: 1%; transform: rotate(370deg);}
+}
+
+@-webkit-keyframes toad-leaf-move {
+0% {bottom: 16%; left: 1%; transform: rotate(0deg);}
+10% {bottom: 19%; left: 10%; transform: rotate(150deg);}
+20% {bottom: 22%; left: 1%; transform: rotate(250deg);}
+80% {bottom: 23%; left: 1%; transform: rotate(350deg);}
+100% {bottom: 23%; left: 7%; transform: rotate(350deg);} 
+}
+
+
+.toad {
+	width: 14vmin;
+    height: 14vmin;
+    position: absolute;
+    border-radius: 20% 150% 20%;
+    bottom: 21%;
+    left: -1%;
+    transform: rotate(55deg);
+    transform-origin: 100% 100%;
+    background-color: #425118;
+    z-index: 1;
+    box-shadow: 1vmin 1vmin 6vmin #1A1D12;
+	animation:toad-breathe .8s linear infinite;
+	}
+
+@keyframes toad-breathe {
+0% {border-radius: 20% 150% 20%;}
+50% {border-radius: 20% 110% 20%;}
+100% {border-radius: 20% 150% 20%;}
+}
+
+@-webkit-keyframes toad-breathe {
+0% {border-radius: 20% 150% 20%;}
+50% {border-radius: 20% 110% 20%;}
+100% {border-radius: 20% 150% 20%;}
+}
+
+.toad:after {
+    content: "";
+    width: 10vmin;
+    height: 10vmin;
+    position: absolute;
+    border-radius: 20% 150% 20%;
+    transform-origin: 100% 100%;
+    background-color: #425118;
+    z-index: 1;
+    top: -6%;
+    right: 35%;
+}
+
+.toad:before {
+	content: "";
+    width: 10vmin;
+    height: 10vmin;
+    position: absolute;
+    border-radius: 20% 150% 20%;
+    transform-origin: 100% 100%;
+    background-color: #425118;
+    z-index: 1;
+    bottom: -10%;
+    right: -12%;
+}
+
+.toad-back1{
+    content: "";
+    width: .9vmin;
+    height: .9vmin;
+    position: absolute;
+    border-radius: 40%;
+    transform-origin: 100% 100%;
+    background-color: #2F3A13;
+    z-index: 4;
+    bottom: 20%;
+    right: 52%;
+    box-shadow: 4.2vmin -4.5vmin 0vmin #2F3A13;
+}
+
+.toad-back2{
+    content: "";
+    width: .7vmin;
+    height: .7vmin;
+    position: absolute;
+    border-radius: 40%;
+    transform-origin: 100% 100%;
+    background-color: #2F3A13;
+    z-index: 4;
+    bottom: 25%;
+    right: 62%;
+    box-shadow: 4.8vmin -4.9vmin 0vmin #2F3A13;
+}
+
+.toad-back3{
+    content: "";
+    width: .9vmin;
+    height: .9vmin;
+    position: absolute;
+    border-radius: 40%;
+    transform-origin: 100% 100%;
+    background-color: #2F3A13;
+    z-index: 4;
+    bottom: 33%;
+    right: 64%;
+    box-shadow: 3.8vmin -4.4vmin 0vmin #2F3A13;
+}
+
+.toad-back3:after{
+    content: "";
+    width: .6vmin;
+    height: .7vmin;
+    position: absolute;
+    border-radius: 40%;
+    transform-origin: 100% 100%;
+    background-color: #2F3A13;
+    z-index: 7;
+    bottom: 1vmin;
+    right: 1vmin;
+    box-shadow: 3.8vmin -4.4vmin 0vmin #2F3A13;
+}
+
+.toad-eyes {
+    width: 1.5vmin;
+    height: 1.5vmin;
+    position: absolute;
+    border-radius: 50%;
+    bottom: 78%;
+    left: 42%;
+    transform: rotate(55deg);
+    transform-origin: 100% 100%;
+    background-color: #232323;
+    box-shadow: 3.1vmin -3.3vmin 0vmin .1vmin #232323;
+    z-index: 0;
+}
+
+.toad-leg1 {
+    width: 4vmin;
+    height: 9vmin;
+    position: absolute;
+    border-radius: 40% 40% 40% 40%;
+    bottom: 12%;
+    left: 42%;
+    transform: rotate(65deg);
+    transform-origin: 100% 100%;
+    background-color: transparent;
+	z-index: 2;
+}
+
+.toad-thigh {
+    width: 4vmin;
+    height: 9vmin;
+    position: absolute;
+    border-radius: 40% 40% 40% 40%;
+    transform-origin: 100% 100%;
+    background-color: #425118;
+	box-shadow: 1vmin .1vmin 5vmin #3E4A1D;
+}
+
+.toad-calf {
+    width: 2vmin;
+    height: 8vmin;
+    position: absolute;
+    border-radius: 40% 40% 90% 90%;
+    bottom: -6%;
+    left: 42%;
+    transform: rotate(5deg);
+    transform-origin: 100% 100%;
+    background-color: #425118;
+}
+
+.toad-calf-after {
+    width: 2vmin;
+    height: 4vmin;
+    position: absolute;
+    bottom: 55%;
+    left: 50%;
+    transform: rotate(5deg);
+    transform-origin: 100% 100%;
+    background-color: #222222;
+    z-index: -1;
+}
+
+.toad-leg2 {
+    width: 4vmin;
+    height: 9vmin;
+    position: absolute;
+    border-radius: 40% 40% 40% 40%;
+    bottom: 23%;
+    left: 31%;
+    transform: rotate(-38deg);
+    transform-origin: 100% 100%;
+    background-color: translate;
+	z-index: 2;
+}
+
+.toad-thigh2 {
+    width: 4vmin;
+    height: 9vmin;
+    position: absolute;
+    border-radius: 40% 40% 40% 40%;
+    transform-origin: 100% 100%;
+    background-color: #425118;
+	box-shadow: -1vmin -.5vmin 5vmin #3E4A1D;
+}
+
+.toad-calf2 {
+    width: 2vmin;
+    height: 8vmin;
+    position: absolute;
+    border-radius: 40% 40% 90% 90%;
+    bottom: -6%;
+    left: 5%;
+    transform: rotate(-5deg);
+    transform-origin: 100% 100%;
+    background-color: #425118;
+}
+
+.toad-calf-after2 {
+    width: 2vmin;
+    height: 3vmin;
+    position: absolute;
+    bottom: 66%;
+    left: -6%;
+    transform: rotate(-5deg);
+    transform-origin: 100% 100%;
+    background-color: #232323;
+    z-index: -1;
+}
+
+
+.toad-elbow {
+	width: 1.8vmin;
+    height: 6vmin;
+    position: absolute;
+    border-radius: 30% 30% 30% 30%;
+    top: 10%;
+    left: 37%;
+    transform: rotate(-108deg);
+    transform-origin: 100% 100%;
+    background-color: #425118;
+	z-index: 2;
+	/* animation: crawl-top-left 1s linear 1; */
+}
+
+@keyframes crawl-top-left {
+0% {top: 10%; left: 37%; transform:rotate(-108deg);}
+50% {top: 10%; left: 37%; transform:rotate(-58deg);}
+100% {top: 10%; left: 37%; transform:rotate(-58deg);}
+}
+
+.toad-elbow:after {
+    content: "";
+    width: 1.8vmin;
+    height: 4vmin;
+    position: absolute;
+    border-radius: 30% 30% 30% 30%;
+    top: -2.2vmin;
+    left: 2.7vmin;
+    transform: rotate(-58deg);
+    transform-origin: 100% 100%;
+    background-color: #425118;
+}
+
+.toad-elbow2 {
+	width: 1.8vmin;
+    height: 6vmin;
+    position: absolute;
+    border-radius: 30% 30% 30% 30%;
+    top: 16%;
+    right: 41%;
+    transform: rotate(138deg);
+    transform-origin: 100% 100%;
+    background-color: #425118;
+	z-index: 2;
+}
+
+.toad-elbow2:after {
+    content: "";
+    width: 1.8vmin;
+    height: 4vmin;
+    position: absolute;
+    border-radius: 30% 30% 30% 30%;
+    top: 0vmin;
+    right: 0vmin;
+    transform: rotate(48deg);
+    transform-origin: 0% 0%;
+    background-color: #425118;
+}
+
+.toad-forefoot1 {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 3vmin 1.5vmin 0 1vmin;
+    border-color: #232323 transparent transparent transparent;
+    position: absolute;
+    box-shadow: none;
+	transform: rotate(115deg);
+    bottom: 2.1vmin;
+    right: -2.5vmin;
+}
+
+.toad-backfoot1 {
+	width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 3vmin 1.5vmin 0 1vmin;
+    border-color: #232323 transparent transparent transparent;
+    position: absolute;
+    transform: rotate(-14deg);
+    box-shadow: none;
+}
+
+.toad-backfoot2 {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 3vmin 1.5vmin 0 1vmin;
+    border-color: #232323 transparent transparent transparent;
+    position: absolute;
+    box-shadow: none;
+    transform: rotate(5deg);
+    bottom: .8vmin;
+}
+
+.toad-forefinger1 {
+    width: .6vmin;
+    height: 5vmin;
+    position: absolute;
+    transform: rotate(-15deg);
+    right: .6vmin;
+    bottom: 1.6vmin;
+    box-shadow: none;
+    background-color: #232323;
+}
+
+.toad-forefinger1:after {
+	content: "";
+    width: 1.5vmin;
+    height: 1.5vmin;
+    position: absolute;
+    border-radius: 50%;
+    top: -1vmin;
+    right: -.5vmin;
+    box-shadow: none;
+    background-color: #232323;
+}
+
+.toad-forefinger2 {
+	width: .6vmin;
+    height: 4vmin;
+    position: absolute;
+    transform: rotate(5deg);
+    right: -.7vmin;
+    bottom: 1.6vmin;
+    box-shadow: none;
+    background-color: #232323;
+}
+
+.toad-forefinger2:after {
+	content: "";
+    width: 1.5vmin;
+    height: 1.5vmin;
+    position: absolute;
+    border-radius: 50%;
+    top: -1vmin;
+    right: -.5vmin;
+    box-shadow: none;
+    background-color: #232323;
+}
+
+.toad-forefinger3 {
+    width: .6vmin;
+    height: 4.5vmin;
+    position: absolute;
+    transform: rotate(28deg);
+    right: -1.9vmin;
+    bottom: 1.6vmin;
+    box-shadow: none;
+    background-color: #232323;
+}
+
+.toad-forefinger3:after {
+	content: "";
+    width: 1.5vmin;
+    height: 1.5vmin;
+    position: absolute;
+    border-radius: 50%;
+    top: -1vmin;
+    right: -.5vmin;
+    box-shadow: none;
+    background-color: #232323;
+}
+
+
+.toad-elblow .toad-forefoot1 {
+    transform: rotate(115deg);
+    bottom: 2.1vmin;
+    right: -2.5vmin;
+}
+
+.toad-forefoot2 {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 3vmin 1.5vmin 0 1vmin;
+    border-color: #232323 transparent transparent transparent;
+    position: absolute;
+    box-shadow: none;
+    transform: rotate(-135deg);
+    right: 2.4vmin;
+    bottom: 1.6vmin;
+}
+
+.lotus {
+	height:15vmin;
+	width:15vmin;
+    position: absolute;
+    top: 5%;
+    left: 55%;
+}
+
+.lotus .toad-leaf-ripples {
+    width: 150%;
+    height: 150%;
+    top: -24%;
+    left: -29%;
+}
+
+.toad-bg:hover .lotus  {
+	animation: lotus-move 30s linear infinite;
+}
+
+@keyframes lotus-move {
+0% {top: 5%; left: 55%; transform:rotate(0deg);}
+10% {top: 15%; left: 49%; transform:rotate(0deg);}
+50% {top: 35%; left: 70%; transform:rotate(100deg);}
+80% {top: 35%; left: 75%; transform:rotate(200deg);}
+100% {top: 35%; left: 78%; transform:rotate(300deg);}
+}
+
+@-webkit-keyframes lotus-move {
+0% {top: 2%; left: 62%;}
+10% {top: 14%; left: 49%;}
+80% {top: 14%; left: 64%;}
+100% {top: 14%; left: 64%;}
+}
+
+.lotus-level1 .shadow div{
+	box-shadow: 0vmin 0vmin .5vmin .7vmin #82A0AB;
+}
+
+.lotus-level2 .shadow div{
+	box-shadow: 0vmin 0vmin 1vmin .5vmin #948A90;
+}
+
+.lotus-level3 .shadow div{
+	box-shadow: 0vmin 0vmin 2vmin .7vmin #948A90;
+}
+
+.lotus-level1  div{
+    background-color: #FDE4F1;
+}
+
+.lotus-level2 {
+    transform: scale(.9) rotate(20deg);
+    position: absolute;
+    left: 3vmin;
+}
+
+.lotus-level3 {
+    transform: scale(.6) rotate(60deg);
+    position: relative;
+    left: 20%;
+    top: 39%;
+}
+
+.lotus-level2  div{
+    background-color: #FFCEE9;
+}
+
+.lotus-level3  div{
+    background-color: #FFBEE9;
+}
+
+.lotus-center {
+	background-color: #FFEF31;
+    height: 53%;
+    width: 53%;
+    position: absolute;
+    border-radius: 50%;
+    left: 18%;
+    top: 24%;
+    box-shadow: 0vmin 0vmin .7vmin .5vmin #BD99B1;
+}
+
+
+
+.lotus-petal {
+	width: 7vmin;
+    height: 7vmin;
+    background-color: #FDE4F1;
+    position: absolute;
+    border-radius: 0% 70% 20%;
+    top: 2%;
+    left: -2%;
+    transform: rotate(0deg);
+	transform-origin: 100% 100%;
+}
+
+
+.lotus-petal1 {
+	width: 7vmin;
+    height: 7vmin;
+    position: absolute;
+    border-radius: 0% 70% 20%;
+    top: 2%;
+    left: -2%;
+    transform: rotate(40deg);
+	transform-origin: 100% 100%;
+}
+
+.lotus-petal2 {
+	width: 7vmin;
+    height: 7vmin;
+    position: absolute;
+    border-radius: 0% 70% 20%;
+    top: 2%;
+    left: -2%;
+    transform: rotate(80deg);
+	transform-origin: 100% 100%;
+}
+
+.lotus-petal3 {
+	width: 7vmin;
+    height: 7vmin;
+    position: absolute;
+    border-radius: 0% 70% 20%;
+    top: 2%;
+    left: -2%;
+    transform: rotate(120deg);
+	transform-origin: 100% 100%;
+}
+
+.lotus-petal4 {
+	width: 7vmin;
+    height: 7vmin;
+    position: absolute;
+    border-radius: 0% 70% 20%;
+    top: 2%;
+    left: -2%;
+    transform: rotate(160deg);
+	transform-origin: 100% 100%;
+}
+
+.lotus-petal5 {
+	width: 7vmin;
+    height: 7vmin;
+    position: absolute;
+    border-radius: 0% 70% 20%;
+    top: 2%;
+    left: -2%;
+    transform: rotate(200deg);
+	transform-origin: 100% 100%;
+}
+
+.lotus-petal6 {
+	width: 7vmin;
+    height: 7vmin;
+    position: absolute;
+    border-radius: 0% 70% 20%;
+    top: 2%;
+    left: -2%;
+    transform: rotate(240deg);
+	transform-origin: 100% 100%;
+}
+
+.lotus-petal7{
+	width: 7vmin;
+    height: 7vmin;
+    position: absolute;
+    border-radius: 0% 70% 20%;
+    top: 2%;
+    left: -2%;
+    transform: rotate(280deg);
+	transform-origin: 100% 100%;
+}
+
+.lotus-petal8 {
+	width: 7vmin;
+    height: 7vmin;
+    position: absolute;
+    border-radius: 0% 70% 20%;
+    top: 2%;
+    left: -2%;
+    transform: rotate(320deg);
+	transform-origin: 100% 100%;
+}
+
 
 /* OTHER */
 
