@@ -20,10 +20,10 @@ a{
 }
 
 .card{
-  border: 1px solid #ECECEC;
-  /*box-shadow: 2px 2px 3px 1px #B3B3B3;*/
-  position: relative;
-  height:55vmin;
+    border: 1px solid #B1B1B1;
+    box-shadow: 0px 1px 8px 1px #CACACA;
+    position: relative;
+    height: 55vmin;
 }
 
 .card-after {
