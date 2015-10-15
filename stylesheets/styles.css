@@ -3949,9 +3949,11 @@ height: 2.5vmin;
 }
 
 @-webkit-keyframes whale-swim-back {
-0% {border-radius: 20% 0% 0% 100%}
-50% {border-radius: 100% 0% 0% 20%}
-100% {border-radius: 20% 0% 0% 100%}
+0% {border-radius: 10% 0% 0% 100%}
+25% {border-radius: 10% 0% 0% 100%}
+50% {border-radius: 100% 0% 0% 10%}
+75% {border-radius: 100% 0% 0% 10%}
+100% {border-radius: 10% 0% 0% 100%}
 }
 
 @keyframes flipper-simple {
@@ -5573,3 +5575,125 @@ animation: calf-after2 1s linear infinite;
 90% {transform: rotate(75deg); }
 100% {transform: rotate(-40deg);}
 }
+
+/* MATCHSTICK */
+
+.matchstick-bg {
+    width: 100%;
+    height: 100%;
+	background-color:#272727;
+	overflow: hidden;
+	position:relative;
+}
+
+.matchstick {
+    width: 1.5vmin;
+    height: 26vmin;
+    background-color: transparent;
+    position: absolute;
+    bottom: 0vmin;
+    left: 50%;
+    transform: translateX(-50%);
+	transition: all 0.3s ease-in-out;
+}
+
+.matchstick-stick {
+    width: 1.5vmin;
+    height: 26vmin;
+    background-color: #3C382E;
+    position: absolute;
+    transition: all 0.1s ease-in-out;
+}
+
+.matchstick-bg:hover .matchstick-stick{
+    background-color: #F7D667;
+}
+
+.matchstick-stick:after {
+    content: "";
+    width: 1.8vmin;
+    height: 2vmin;
+    border-radius: 50% 50% 0% 0%;
+    background-color: #35251F;
+    position: absolute;
+    left: 50%;
+    top: -8%;
+    transform: translateX(-45%);
+	transition: all 0.1s ease-in-out;
+}
+
+.matchstick-bg:hover .matchstick-stick:after{
+    background-color: #501E0A;
+}
+
+.flame {
+	height: 8vmin;
+    width: 7vmin;
+    background: #FFD700;
+    position: absolute;
+    left: -175%;
+    border-radius: 90% 15% 70% 70%;
+    overflow: overlay;
+    box-shadow: inset 0vmin -1vmin 3vmin #FF7E00;
+    top: -22%;
+    z-index: -2;
+	display:none;
+	transition: all 0.2s ease-in-out;
+}
+
+.flame-big {
+    height: 12vmin;
+    width: 10vmin;
+    background: #FF9500;
+    position: absolute;
+    left: -260%;
+    border-radius: 90% 15% 70% 70%;
+    overflow: overlay;
+    box-shadow: 0vmin -2vmin 19vmin 2VMIN rgb(255, 215, 0);
+    top: -36%;
+    z-index: -3;
+    opacity: .7;
+    display: none;
+	transition: all 0.2s ease-in-out;
+}
+
+.matchstick-bg:hover .flame{
+	display:block;
+	animation:flame .75s linear infinite;
+	transition: all 0.1s ease-in-out;
+}
+
+@keyframes flame {
+0% {border-radius: 90% 25% 70% 70%; display:block}
+50% {border-radius: 25% 90% 70% 70% ; display:block}
+100% {border-radius: 90% 25% 70% 70%; display:block}
+}
+
+@-webkit-keyframes flame {
+0% {border-radius: 10% 0% 0% 100%}
+25% {border-radius: 10% 0% 0% 100%}
+50% {border-radius: 100% 0% 0% 10%}
+75% {border-radius: 100% 0% 0% 10%}
+100% {border-radius: 10% 0% 0% 100%}
+}
+
+.matchstick-bg:hover .flame-big{
+	display:block;
+	animation:flame-big .75s linear infinite;
+	transition: all 0.1s ease-in-out;
+}
+
+@keyframes flame-big {
+0% {border-radius: 90% 25% 70% 70%; display:block}
+50% {border-radius: 25% 90% 70% 70%; display:block}
+100% {border-radius: 90% 25% 70% 70%; display:block}
+}
+
+@-webkit-keyframes flame-big {
+0% {border-radius: 10% 0% 0% 100%}
+25% {border-radius: 10% 0% 0% 100%}
+50% {border-radius: 100% 0% 0% 10%}
+75% {border-radius: 100% 0% 0% 10%}
+100% {border-radius: 10% 0% 0% 100%}
+}
+
