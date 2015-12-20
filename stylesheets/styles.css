@@ -5697,3 +5697,557 @@ animation: calf-after2 1s linear infinite;
 100% {border-radius: 10% 0% 0% 100%}
 }
 
+/* Monster */
+
+.monster-bg {
+    position: relative;
+    height: 100%;
+    overflow:hidden;
+    background: #192839; 
+}
+
+.monster-moon {
+    position: absolute;
+    height: 32vmin;
+    width:32vmin;
+    border-radius:50%;
+    background: #374B61; 
+    left: 50%;
+    transform:translateX(-50%);
+    top:0%;
+    z-index: 0;
+}
+
+.monster-head {
+	  position: absolute;
+    height: 5vmin;
+    width: 7vmin;
+    background: #111C2D;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 15%;
+    z-index: 2;
+}
+
+.monster-head:after {
+	content: "";
+    position: absolute;
+    height: 6vmin;
+    width: 7vmin;
+    border-radius: 50%;
+    background: #111C2D;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 50%;
+}
+
+.monster-head:before {
+    content: "";
+    position: absolute;
+    height: 6vmin;
+    width: 7vmin;
+    border-radius: 50%;
+    background: #111C2D;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 50%;
+}
+
+.monster-torso {
+    position: absolute;
+    height: 14vmin;
+    width: 14vmin;
+    border-radius: 20%;
+    background: #111C2D;
+    left: 50%;
+    transform: translateX(-50%) rotate(0deg);
+    transform-origin: 50% 0%;
+    top: 28%;
+    z-index: 2;
+}
+
+.monster-arms {
+    position: absolute;
+    height: 30vmin;
+    width: 30vmin;
+    border-radius: 40%;
+    border: 5vmin solid #111C2D;
+    background: transparent;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 26%;
+}
+
+.monster-arms:before {
+    content: "";
+    position: absolute;
+    height: 5vmin;
+    width: 4.9vmin;
+    border-radius: 50%;
+    background: #111C2D;
+    left: -12%;
+    transform: translateX(-50%);
+    top: 51%;
+    z-index: 9;
+}
+
+.monster-arms:after {
+    content: "";
+    position: absolute;
+    height: 5vmin;
+    width: 4.8vmin;
+    border-radius: 50%;
+    background: #111C2D;
+    right: -36%;
+    transform: translateX(-50%);
+    top: 51%;
+    z-index: 9;
+}
+
+.monster-arms  div{
+    position: absolute;
+    height: 30vmin;
+    width: 30vmin;
+    background: #192839;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 67%;
+}
+
+.monster-leg1 {
+    position: absolute;
+    height: 16vmin;
+    width: 2vmin;
+    background: #111C2D;
+    left: 50%;
+    transform: translateX(-170%);
+    top: 53.6%;
+    z-index: 2;
+}
+
+.monster-leg2 {
+    position: absolute;
+    height: 16vmin;
+    width: 2vmin;
+    background: #111C2D;
+    left: 50%;
+    transform: translateX(75%);
+    top: 53.6%;
+    z-index: 2;
+}
+
+.monster-eyes {
+    position: absolute;
+    height: .5vmin;
+    width: .5vmin;
+    background: #F3F3F3;
+    border-radius: 50%;
+    left: 25%;
+    top: 20%;
+    box-shadow: 2.7vmin 0vmin #fff;
+}
+
+.monster-eyes:after {
+    content:"";
+    position: absolute;
+    height: .5vmin;
+    width: .5vmin;
+    background: none;
+    border-radius: 50%;
+    left: 25%;
+    top: 20%;
+    box-shadow: 2.7vmin 0vmin transparent;
+}
+
+.monster-eyes:before {
+    content:"";
+    position: absolute;
+    height: .5vmin;
+    width: .5vmin;
+    background: none;
+    border-radius: 50%;
+    left: 25%;
+    top: 20%;
+    box-shadow: 2.7vmin 0vmin transparent;
+}
+
+.monster-horns {
+    position: absolute;
+    height: 0;
+    border-style: solid;
+    border-width: 5vmin 0 0 2vmin;
+    border-color: transparent transparent transparent #111C2D;
+    top: -5vmin;
+}
+
+.monster-horns:after {
+    content: "";
+    position: absolute;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 5vmin 2vmin;
+    border-color: transparent transparent #111C2D transparent;
+    top: -5vmin;
+    right: -5.1vmin;
+}
+
+.monster-cape {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 11vmin 30vmin 11vmin;
+    border-color: transparent transparent #213046 transparent;
+    left: 50%;
+    top: 15%;
+    transform-origin: 50% 0%;
+    z-index: 1;
+    animation: cape-blow .2s linear infinite;
+}
+
+    transform: translateX(-50%) rotate(0deg);
+
+@keyframes cape-blow {
+0% {transform: translateX(-50%) rotate(-1deg);}
+50% {transform: translateX(-50%) rotate(-3deg);}
+100% {transform: translateX(-50%) rotate(-1deg);}
+}
+
+@-webkit-keyframes cape-blow {
+0% {transform: translateX(-50%) rotate(-1deg);}
+50% {transform: translateX(-50%) rotate(-3deg);}
+100% {transform: translateX(-50%) rotate(-1deg);}
+}
+
+.rain-stream {
+    position: absolute;
+    width: 6vmin;
+    height: .2vmin;
+    background-color: #404F5F;
+    left: 50%;
+    top: 15%;
+    transform-origin: 50% 0%;
+    z-index: 5;
+    transform: translateX(0vmin) translateY(0vmin) rotate(60deg);
+    animation: rain-fall .2s linear infinite;
+}
+
+@keyframes rain-fall {
+    0% {
+        transform: translatex(0vmin) translatey(0vmin) rotate(65deg);
+    }
+    100% {
+        transform: translatex(10vmin) translatey(15vmin) rotate(65deg);
+    }
+}
+
+@-webkit-keyframes rain-fall {
+    0% {
+        transform: translatex(0vmin) translatey(0vmin) rotate(60deg);
+    }
+    100% {
+        transform: translatex(10vmin) translatey(15vmin) rotate(60deg);
+    }
+}
+
+.rain-stream:before {
+    content: "";
+    position: absolute;
+    width: 4vmin;
+    height: .3vmin;
+    background-color: #8D8D8D;
+    left: 190%;
+    top: 15%;
+    transform-origin: 50% 0%;
+    z-index: 5;
+}
+
+.rain-stream:after {
+    content: "";
+    position: absolute;
+    width: 4vmin;
+    height: .3vmin;
+    background-color: #8D8D8D;
+    left: -190%;
+    top: 15%;
+    transform-origin: 50% 0%;
+    z-index: 5;
+}
+
+.rain-inner {
+    position: absolute;
+    width: 4vmin;
+    height: .2vmin;
+    background-color: #929292;
+    left: 560%;
+    top: 15%;
+    transform-origin: 50% 0%;
+    z-index: 5;
+}
+
+.rain-inner:before {
+    content: "";
+    position: absolute;
+    width: 4vmin;
+    height: .2vmin;
+    background-color: #929292;
+    left: 190%;
+    top: 15%;
+    transform-origin: 50% 0%;
+    z-index: 5;
+}
+
+.rain-inner:after {
+    content: "";
+    position: absolute;
+    width: 4vmin;
+    height: .2vmin;
+    background-color: #929292;
+    left: -190%;
+    top: 15%;
+    transform-origin: 50% 0%;
+    z-index: 5;
+}
+
+.monster-bg:hover {
+    background: #FF5040;
+}
+
+.monster-bg:hover .monster-moon{
+    background: #FF5040;
+}
+
+.monster-bg:hover .monster-arms div{
+    background: #FF5040;
+}
+
+.monster-bg:hover .monster-torso {
+    background: #FFBD8C;
+    animation: torso-jiggle .2s linear infinite;
+}
+
+@keyframes torso-jiggle {
+0% {transform: translateX(-50%) rotate(-1deg);}
+50% {transform: translateX(-50%) rotate(1deg);}
+100% {transform: translateX(-50%) rotate(-1deg);}
+}
+
+@-webkit-keyframes torso-jiggle {
+0% {transform: translateX(-50%) rotate(-1deg);}
+50% {transform: translateX(-50%) rotate(1deg);}
+100% {transform: translateX(-50%) rotate(-1deg);}
+}
+
+.monster-bg:hover .monster-head {
+    background: #FFBD8C;
+    z-index:3;
+}
+
+.monster-bg:hover .monster-head:before {
+    background: #FFBD8C;
+}
+
+.monster-bg:hover .monster-head:after {
+    background: #FFBD8C;
+}
+
+.monster-bg:hover .monster-arms {
+    border: 5vmin solid #FFBD8C;
+    animation: torso-jiggle .2s linear infinite;
+}
+
+.monster-bg:hover .monster-arms:before {
+    background: #FFBD8C;
+}
+
+.monster-bg:hover .monster-arms:after {
+    background: #FFBD8C;
+}
+
+
+.monster-bg:hover .monster-horns {
+    border-color: transparent transparent transparent transparent;
+}
+
+.monster-bg:hover .monster-horns:after {
+    border-color: transparent transparent transparent transparent;
+}
+
+.monster-bg:hover .monster-leg1 {
+    background: #FFBD8C;
+    z-index:0;
+}
+
+.monster-bg:hover .monster-leg2 {
+    background: #FFBD8C;
+    z-index:0;
+}
+
+.monster-bg:hover .rain-stream {
+    background-color: transparent;
+}
+
+.monster-bg:hover .rain-stream:before {
+    background-color: transparent;
+}
+
+.monster-bg:hover .rain-stream:after {
+    background-color: transparent;
+}
+
+.monster-bg:hover .rain-inner {
+    background-color: transparent;
+}
+
+.monster-bg:hover .rain-inner:before {
+    background-color: transparent;
+}
+
+.monster-bg:hover .rain-inner:after {
+    background-color: transparent;
+}
+
+.monster-bg:hover .monster-eyes {
+    height: 1vmin;
+    width: 1vmin;
+    background: #fff;
+    box-shadow: 2.7vmin 0vmin #fff;
+}
+
+.monster-bg:hover .monster-eyes:before { 
+    content: "";
+    position: absolute;
+    height: .5vmin;
+    width: .5vmin;
+    background: #256A8B;
+    border-radius: 50%;
+    left: 25%;
+    top: 30%;
+    box-shadow: 2.7vmin 0vmin #256A8B;
+  }
+
+ .monster-bg:hover .monster-eyes:after {
+    content: "";
+    position: absolute;
+    height: .5vmin;
+    width: 2vmin;
+    background: #614A06;
+    border-radius: 50%;
+    left: -55%;
+    top: -70%;
+    box-shadow: 2.7vmin 0vmin #614A06;
+}
+
+.monster-bg:hover .monster-cape {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 11vmin 30vmin 11vmin;
+    border-color: transparent transparent #FFB531 transparent;
+    left: 50%;
+    top: 15%;
+    transform-origin: 50% 50%;
+    z-index: 1;
+    animation: cape-blow .2s linear infinite;
+    opacity: .9;
+}
+
+.monster-ears {
+
+    position: absolute;
+    width: .5vmin;
+    height: 2vmin;
+    background: #111C2D;
+    border-radius: 20%;
+    z-index: 0;
+    top: 20%;
+    left: -7%;
+    box-shadow: 7.5vmin 0vmin 0vmin #111C2D;
+
+}
+
+.monster-bg:hover .monster-ears {
+    background: #FFBD8C;
+    box-shadow: 7.5vmin 0vmin 0vmin #FFBD8C;
+}
+
+.monster-beard {
+
+}
+
+.monster-sideburns {
+
+}
+
+.monster-beard:after {
+  content:"";
+}
+
+.monster-beard:before {
+  content:"";
+}
+
+ .monster-bg:hover .monster-beard {
+    position: absolute;
+    width: 7.1vmin;
+    height: 4vmin;
+    background: #442624;
+    border-radius: 0rem 0rem 3vmin 3vmin;
+    z-index: 2;
+    top: 70%;
+}
+
+ .monster-bg:hover .monster-beard:after {
+    position: absolute;
+    width: 4vmin;
+    height: 3.5vmin;
+    background: #FFBD8C;
+    border-radius: 50%;
+    z-index: 2;
+    top: -17%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: .6vmin solid #442624;
+}
+
+ .monster-bg:hover .monster-beard:before {
+    position: absolute;
+    width: 2vmin;
+    height: .4vmin;
+    background: #E46B30;
+    top: 17%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 5;
+}
+
+ .monster-bg:hover .monster-sideburns {
+    position: absolute;
+    width: .5vmin;
+    height: 3vmin;
+    background: #442624;
+    z-index: 2;
+    top: 18%;
+    box-shadow: 6.6vmin .1vmin 0vmin #442624;
+}
+
+.monster-necklace {
+
+}
+
+
+ .monster-bg:hover .monster-necklace {
+    position: absolute;
+    width: 7.1vmin;
+    height: 5vmin;
+    background: none;
+    border-radius: 0rem 0rem 3vmin 3vmin;
+    border-left: .5vmin solid #B93092;
+    border-right: .5vmin solid #B93092;
+    border-bottom: .5vmin solid #B93092;
+    z-index: 2;
+    top: -8%;
+    left: 50%;
+    transform: translateX(-50%);
+}
