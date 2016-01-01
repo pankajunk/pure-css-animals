@@ -6251,3 +6251,404 @@ animation: calf-after2 1s linear infinite;
     left: 50%;
     transform: translateX(-50%);
 }
+
+/* faces */
+
+.faces-bg {
+        position: relative;
+    }
+
+.angry {
+    position: absolute;
+    height: 15vmin;
+    width: 15vmin;
+    background: #ECC19C;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 9vmin;
+    z-index: 2;
+    border-radius: 50% 50% 0% 0%;
+    box-shadow: 0vmin 7vmin 0vmin #292524;
+}
+
+.angry:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 7vmin 7.5vmin 0 7.5vmin;
+    border-color: #292524 transparent transparent transparent;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 146.5%;
+}
+
+.angry:before {
+    content: "";
+    position: absolute;
+    width: 3.5vmin;
+    height: 3.5vmin;
+    border-radius: 50%;
+    background: #292524;
+    border: 1.5vmin solid #fff;
+    border-style: solid;
+    left: 2vmin;
+    top: 7vmin;
+    box-shadow: 7.5vmin 0vmin 0vmin -1.5vmin #243548, 7.5vmin 0vmin 0vmin .1vmin #FFFFFF;
+    transition: .2s ease-in-out;
+}
+
+.faces-bg:hover .angry:before {
+    content: "";
+    position: absolute;
+    width: 4vmin;
+    height: 2.5vmin;
+    border-radius: 50% 50% 0% 0%;
+    background: #292524;
+    border-top: 1.8vmin solid #fff;
+    border-left: 1.5vmin solid #fff;
+    border-right: 1.5vmin solid #fff;
+    border-bottom: .2vmin solid #fff;
+    border-style: solid;
+    left: 1.8vmin;
+    top: 7.4vmin;
+    box-shadow: 7.5vmin .9vmin 0vmin -1vmin #292524, 7.5vmin 0vmin 0vmin .0vmin #FFFFFF;
+}
+
+.angry div{
+    position: absolute;
+    height: .5vmin;
+    width: 6vmin;
+    background: #5C5858;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 17vmin;
+    z-index: 2;
+    transition: .2s ease-in-out;
+ 
+}
+
+.angry div:before{
+    content: "";
+    position: absolute;
+    height: 1vmin;
+    width: 5vmin;
+    background: #292524;
+    left: -3.2vmin;
+    top: -11.5vmin;
+    z-index: 2;
+    transition: .2s ease-in-out;
+}
+
+.angry div:after{
+    content: "";
+    position: absolute;
+    height: 1vmin;
+    width: 5vmin;
+    background: #292524;
+    right: -3.2vmin;
+    top: -11.5vmin;
+    z-index: 2;
+    transition: .2s ease-in-out;
+}
+
+.faces-bg:hover .angry div:before{
+    transform: rotate(15deg);
+    content: "";
+    position: absolute;
+    height: 1vmin;
+    width: 5.4vmin;
+    background: #292524;
+    left: -2.9vmin;
+    top: -11vmin;
+}
+
+.faces-bg:hover .angry div:after{
+    transform: rotate(-15deg);
+    content: "";
+    position: absolute;
+    height: 1vmin;
+    width: 5.4vmin;
+    background: #292524;
+    right: -2.9vmin;
+    top: -11vmin;
+}
+
+.faces-bg:hover .angry div {
+    position: absolute;
+    height: 4vmin;
+    width: 6vmin;
+    background: #927070;
+    left: 50%;
+    transform: translateX(-50%);
+    border-top: 1vmin solid #fff;
+    border-bottom: 1vmin solid #fff;
+    top: 17vmin;
+    z-index: 2;
+
+}
+
+
+.afraid {
+    position: absolute;
+    height: 15vmin;
+    width: 15vmin;
+    background: #ECC19C;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 13vmin;
+    z-index: 2;
+    border-radius: 50% 50% 20% 20%;
+    border-bottom: 1vmin solid #E3E3E3;
+    box-shadow: 0vmin -.2vmin 0vmin 1vmin #E3E3E3, 0vmin 9.45vmin 0vmin 1vmin #E3E3E3;
+}
+
+.afraid:after {
+    content: "";
+    width: 3vmin;
+    height: 3vmin;
+    background: #ECC19C;
+    position: absolute;
+    border-radius: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -1.5vmin;
+    border-bottom: .2vmin solid #7D7D7D;
+    border-top: .2vmin solid #DAAB83;
+    box-shadow: 0vmin -17.5vmin 0vmin 2vmin #E3E3E3, 0vmin -9vmin 0vmin -.5vmin #E65024;
+}
+
+.afraid:before {
+    content: "";
+    position: absolute;
+    width: 1vmin;
+    height: 1vmin;
+    border-radius: 50%;
+    background: #292524;
+    border: 0vmin solid #292524;
+    border-style: solid;
+    left: 3vmin;
+    top: 7vmin;
+    box-shadow: 7.5vmin 0vmin 0vmin -1.5vmin #292524, 7.5vmin 0vmin 0vmin .1vmin #292524;
+    transition: .1s ease-in-out;
+}
+
+.faces-bg:hover .afraid:before {
+    content: "";
+    position: absolute;
+    width: 3.5vmin;
+    height: 3.5vmin;
+    border-radius: 50%;
+    background: #292524;
+    border: 1.2vmin solid #fff;
+    border-style: solid;
+    left: 2vmin;
+    top: 6vmin;
+    box-shadow: 7.5vmin 0vmin 0vmin -1.2vmin #243548, 7.5vmin 0vmin 0vmin .1vmin #FFFFFF;
+    transition: .2s ease-in-out;
+}
+
+.afraid div{
+    position: absolute;
+    height: .5vmin;
+    width: 6vmin;
+    background: #5C5858;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 17vmin;
+    z-index: 2;
+    transition: .1s ease-in-out;
+ 
+}
+
+.afraid div:before{
+    content: "";
+    position: absolute;
+    height: 1vmin;
+    width: 4vmin;
+    background: #292524;
+    left: -3.2vmin;
+    top: -11.5vmin;
+    z-index: 2;
+    transition: .1s ease-in-out;
+}
+
+.afraid div:after{
+    content: "";
+    position: absolute;
+    height: 1vmin;
+    width: 4vmin;
+    background: #292524;
+    right: -3.2vmin;
+    top: -11.5vmin;
+    z-index: 2;
+    transition: .1s ease-in-out;
+}
+
+.faces-bg:hover .afraid div:before{
+    content: "";
+    position: absolute;
+    height: 1vmin;
+    width: 4.4vmin;
+    background: #292524;
+    left: -2.9vmin;
+    top: -14vmin;
+}
+
+.faces-bg:hover .afraid div:after{
+    content: "";
+    position: absolute;
+    height: 1vmin;
+    width: 4.4vmin;
+    background: #292524;
+    right: -2.9vmin;
+    top: -14vmin;
+}
+
+.faces-bg:hover .afraid div {
+    position: absolute;
+    height: 5.5vmin;
+    width: 6.5vmin;
+    background: #927070;
+    left: 50%;
+    transform: translateX(-50%);
+    border-top: 1vmin solid #fff;
+    border-bottom: 1vmin solid #fff;
+    top: 16.6vmin;
+    z-index: 2;
+
+}
+
+
+.laughing {
+    position: absolute;
+    height: 15vmin;
+    width: 17vmin;
+    background: #ECC19C;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 10.5vmin;
+    z-index: 2;
+    border-radius: 0% 50% 0% 0%;
+    border-top: 8vmin solid #DDAD4E;
+    border-left: 1vmin solid #DDAD4E;
+    border-right: 1vmin solid #DDAD4E;
+    box-shadow: 0vmin 8.1vmin 0vmin -.9vmin #ECC19C;
+}
+
+.laughing:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 8vmin 7.5vmin 0 7.5vmin;
+    border-color: #ECC19C transparent transparent transparent;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 14.2vmin;
+}
+
+.laughing:before {
+    content: "";
+    position: absolute;
+    width: 1vmin;
+    height: 1vmin;
+    border-radius: 50%;
+    background: #292524;
+    border: 0vmin solid #292524;
+    border-style: solid;
+    left: 5vmin;
+    top: 6vmin;
+    box-shadow: 4.5vmin 0vmin 0vmin #292524;
+    transition: .1s ease-in-out;
+}
+
+.faces-bg:hover .laughing:before {
+    content: "";
+    position: absolute;
+    width: 3.5vmin;
+    height: .5vmin;
+    border-radius: 0%;
+    background: #292524;
+    left: 3vmin;
+    top: 6vmin;
+    box-shadow: 6vmin 0vmin 0vmin #243548;
+    transition: .2s ease-in-out;
+}
+
+.laughing div{
+    position: absolute;
+    height: 2.5vmin;
+    width: 2vmin;
+    border-top: 1vmin solid #5C5858;
+    background: transparent;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 0% 0% 50% 50%;
+    top: 15vmin;
+    z-index: 2;
+    transition: .1s ease-in-out;
+    box-shadow: 0vmin -5vmin 0vmin 0vmin #DFB897, 0vmin 6vmin 0vmin 1vmin #FFFFFF;
+ 
+}
+
+.laughing div:before{
+    content: "";
+    position: absolute;
+    height: .3vmin;
+    width: 4vmin;
+    background: #292524;
+    left: -4vmin;
+    top: -11vmin;
+    z-index: 2;
+    transition: .1s ease-in-out;
+}
+
+.laughing div:after{
+    content: "";
+    position: absolute;
+    height: .3vmin;
+    width: 4vmin;
+    background: #292524;
+    right: -4vmin;
+    top: -11vmin;
+    z-index: 2;
+    transition: .1s ease-in-out;
+}
+
+.faces-bg:hover .laughing div:before{
+    content: "";
+    position: absolute;
+    height: .3vmin;
+    width: 4.4vmin;
+    background: #292524;
+    left: -2.9vmin;
+    top: -10vmin;
+}
+
+.faces-bg:hover .laughing div:after{
+    content: "";
+    position: absolute;
+    height: .3vmin;
+    width: 4.4vmin;
+    background: #292524;
+    right: -2.9vmin;
+    top: -10vmin;
+}
+
+.faces-bg:hover .laughing div {
+    position: absolute;
+    height: 3.5vmin;
+    width: 5vmin;
+    background: #000;
+    left: 50%;
+    border-radius: 0% 0% 50% 50%;
+    transform: translateX(-50%);
+    border-top: dotted 1vmin #FFF;
+    top: 12.6vmin;
+    z-index: 2;
+    box-shadow: 0vmin -5vmin 0vmin 0vmin transparent, 0vmin 8.4vmin 0vmin 1vmin #FFFFFF;
+
+}
